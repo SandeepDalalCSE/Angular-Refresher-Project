@@ -1,5 +1,12 @@
-<label for="name">Name</label>
+<!-- Using local reference -->
+<!-- <label for="name">Name</label> -->
 <!-- Adding a local reference for the complete DOM input field as #personNameEl-->
-<input type="text" id="name" #personNameEl />
+<!-- <input type="text" id="name" #personNameEl /> -->
 <!-- Here we are sending value entered in the input field as an parameters to this method onCreatePerson() in the person-input-component.ts file. -->
-<button (click)="onCreatePerson(personNameEl.value)">Create</button>
+<!-- <button (click)="onCreatePerson(personNameEl.value)">Create</button> -->
+
+<!-- Using Two-Way-Binding -->
+<label for="name">Name</label>
+<!-- Adding ngModel for the two-way-binding with the property enteredPersonName-->
+<input type="text" id="name" [(ngModel)]="enteredPersonName" />
+<button (click)="onCreatePerson()">Create</button>
