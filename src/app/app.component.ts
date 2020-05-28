@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Refresher-Project';
+
+  persons: string[] = ['Sandeep', 'Ajay', 'Bhavuk'];
 }
