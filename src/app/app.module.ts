@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 // Registering persons component in app module.
 import { PersonsComponent } from './persons/persons.component';
 import { PersonInputComponent } from './persons/person-input.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   // the selector of persons component will look in all other component in the declarations.
@@ -16,7 +17,8 @@ import { PersonInputComponent } from './persons/person-input.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
