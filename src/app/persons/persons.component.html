@@ -1,4 +1,5 @@
-<ul>
+<p *ngIf="isFetching">Fetching Data...</p>
+<ul *ngIf="!isFetching">
   <!-- Using ngFor Directive to replicate this list item. And String Interpolation {{}} for printing dynamic data. -->
   <li *ngFor="let person of personList" (click)="onRemovePerson(person)">
     {{ person }}
