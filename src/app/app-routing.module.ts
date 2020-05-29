@@ -8,7 +8,7 @@ import { PersonInputComponent } from './persons/person-input.component';
 // Now a route definition in its simplest form has a path which is the path,so the part after your domain you want to load a certain page for.
 const routes: Routes = [
   {
-    path: '/', // http://localhost:4200/
+    path: '', // http://localhost:4200/
     component: PersonsComponent
   },
   {
