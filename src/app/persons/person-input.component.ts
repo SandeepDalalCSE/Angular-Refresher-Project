@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-person-input',
@@ -6,12 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./person-input.component.css']
 })
 export class PersonInputComponent {
+  // creating object based on this EventEmitter Class, plus this object is also a property of this class 'PersonInputComponent'
+  @Output() personCreate = new EventEmitter<string>();
   enteredPersonName = '';
 
   // Using Two-Way-Binding concept.
   // receving a value as an argument of type string in a variable 'personName'.
   onCreatePerson() {
     console.log("Created a person : " + this.enteredPersonName);
+    // Here we have value from the input field so, we will be emitting it using an event emitter.
+    this.personCreate.emit(this.enteredPersonName); // Object personCreate will carry value.
+    // emit() is defined and declared in EventEmitter Class,so object/instance of EventEmitter class is calling it
     this.enteredPersonName = '';
   }
 
